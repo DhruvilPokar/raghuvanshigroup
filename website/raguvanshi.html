@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <nav class="nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#businesses">Our Businesses</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghuvanshi Group - Building Tomorrow's Infrastructure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2>Welcome to Raghuvanshi Group</h2>
+         </header>
+   
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Raghuvanshi Group is a diversified business group with decades of experience across manufacturing, trading, and industrial supply sectors. Built on the values of quality, trust, and long-term relationships, the group has steadily grown into a reliable name serving industrial and commercial clients.</p>
+
+<p>With a strong foundation that began in timber and wood processing, Raghuvanshi Group has expanded its operations to include thermocol ,  fabric manufacturing, and industrial trading. Each business under the group operates with a commitment to precision, consistency, and customer satisfaction.</p>
+
+<p>The group focuses on delivering practical, cost-effective, and durable solutions that meet the evolving needs of industries such as packaging, construction, manufacturing, and logistics. Backed by skilled manpower, modern processes, and ethical business practices, Raghuvanshi Group continues to build lasting partnerships and contribute to sustainable industrial growth.</p>
+</section>
+    <section id="businesses">
+        <h2>Our Businesses</h2>
+        <a href="C:\xampp\htdocs\website\sawmill\sawmill.html" style="text-decoration: none; color: inherit;">
+            <div class="business">
+                <img src="https://drive.google.com/thumbnail?id=1kOAzJBZwogqMRqPuCHvuQJxLs5O8zmtF&sz=s800" alt="Raghuvansi Saw Mill Logo"> <!-- Replace with actual image -->
+                <div>
+                    <h3>Raghuvansi Saw Mill</h3>
+                    <p>Established in 1980, Raghuvansi Saw Mill specializes in high-quality timber processing and wooden products. We manufacture wooden pallets, packing boxes, crates, cable drums, and provide customized wood job work for industrial and commercial needs.</p>
+                </div>
+            </div>
+        </a>
+        <a href="bhavana/bhavana-traders.html" style="text-decoration: none; color: inherit;">
+        <div class="business">
+            <img src="https://drive.google.com/thumbnail?id=16i4-c8Q2aTuiZWv6PrjRDnjYTVsIDi82&sz=s800" alt="Bhavana Traders Logo"> <!-- Replace with actual image -->
+            <div>
+                <h3>Bhavana Traders</h3>
+                <p>Founded in 2001, Bhavana Traders is a trusted supplier of engineering, hardware, and machinery tools. We deal in saw mill tools, pipe fitting tools, and general machinery equipment, serving workshops, factories, and industrial clients with reliable solutions</p>
+            </div>
+        </div>
+        </a>
+        <a href="Bansari Thermocol/index.html" style="text-decoration: none; color: inherit;">
+        <div class="business">
+            <img src="https://drive.google.com/thumbnail?id=1q3fRFKTkUQsGb6Zw1-lGW5MqTWI4wxsZ&sz=s800" alt="Bansari Thermocol Logo"> <!-- Replace with actual image -->
+            <div>
+                <h3>Bansary Thermocol</h3>
+                <p>Bansary Thermocol specializes in manufacturing premium thermocol (EPS) products. Our offerings include thermocol boxes, sheets, molds, and customized packaging solutions, widely used for protection, insulation, and industrial packing applications.</p>
+            </div>
+        </div>
+        </a>
+        <a href="Bansari Polymers/index.html" style="text-decoration: none; color: inherit;">
+        <div class="business">
+            <img src="https://drive.google.com/thumbnail?id=1mQuKIYKMu6t8JRPrcf4w4oQAcWRDnyIu&sz=s800" alt="Bansari Polymers Logo"> <!-- Replace with actual image -->
+            <div>
+                <h3>Bansari Polymers</h3>
+                <p>Bansari Polymers focuses on polymer and fabric-based manufacturing solutions. We deliver durable, high-quality polymer and textile products designed for industrial, packaging, and manufacturing applications with consistent performance and reliability.</p>
+            </div>
+        </div>
+    </a>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Timber & Wood Processing</li>
+            <li>Industrial Hardware & Trading</li>
+            <li>Thermocol & Packaging Products</li>
+            <li>Fabric & cloth manufacturing</li>
+            <!-- Add more as needed -->
+        </ul>
+    </section>
+    <section id="contact">
+       <div class="contact-wrapper">
+            <div style="background: rgba(0,212,170,0.05); padding: 25px; border-radius: 15px;">
+                <p class="bold-text">Shree Raghuvanshi Group</p>
+                <p>📞 +91 97250 41828</p>
+                <p>📧 Jogesh8885@raghuvanshigroup.com</p>
+                <div style="margin-top: 20px;">
+                    <a href="tel:+919725041828" style="display:inline-block; padding: 12px 25px; background: var(--primary-color); color: white; border-radius: 25px; font-weight: bold;">Call Us Now</a>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Raghuvanshi Group. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const form = this;
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Disable button during submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Send form data via AJAX
+            const formData = new FormData(form);
+            
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                formMessage.innerHTML = data;
+                formMessage.className = data.includes('Thank') ? 'success' : 'error';
+                
+                if (data.includes('Thank')) {
+                    form.reset();
+                }
+            })
+            .catch(error => {
+                formMessage.textContent = 'Error: Could not send message. Please try again.';
+                formMessage.className = 'error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send';
+            });
+        });
+
+        // Business-specific login logic (demo)
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const business = document.getElementById('business').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (business && username && password) {
+                // Placeholder: In a real app, authenticate via server and redirect based on business
+                let redirectUrl = '/dashboard'; // Default
+                switch (business) {
+                    case 'sawmill':
+                        redirectUrl = 'sawmill.html'; // Custom page for Saw Mill
+                        break;
+                    case 'traders':
+                        redirectUrl = '/traders-dashboard'; // Custom page for Traders
+                        break;
+                    case 'thermocol':
+                        redirectUrl = '/thermocol-dashboard'; // Custom page for Thermocol
+                        break;
+                    case 'polymers':
+                        redirectUrl = '/polymers-dashboard'; // Custom page for Polymers
+                        break;
+                }
+                alert(`Sign in successful for ${business}! Redirecting to ${redirectUrl} (This is a demo - integrate with backend for real functionality)`);
+                window.location.href = redirectUrl; // Uncomment for actual redirect
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
